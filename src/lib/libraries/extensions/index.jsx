@@ -1,6 +1,9 @@
 import React from 'react';
 import {FormattedMessage} from 'react-intl';
 
+import scratchrobotBlockIcon from './scratch_robot/scratch_robot_icon.png';
+import scratchrobotBlockImage from './scratch_robot/scratch_robot_image.png';
+
 import musicIconURL from './music/music.png';
 import musicInsetIconURL from './music/music-small.svg';
 
@@ -47,6 +50,26 @@ import gdxforConnectionIconURL from './gdxfor/gdxfor-illustration.svg';
 import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 
 export default [
+    {
+        name: 'Scratch Robot',
+        extensionId: 'scratchrobot',
+        collaborator: 'Christiaan Brekelmans',
+        iconURL: scratchrobotBlockImage,
+        insetIconURL: scratchrobotBlockIcon,
+        description: (
+            <FormattedMessage
+                defaultMessage="Control a robot"
+                description="Blocks to control robot"
+                id="gui.extension.newblocks.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        bluetoothRequired: false,
+        internetConnectionRequired: true,
+        helpLink: 'https://scratch.mit.edu/wedo'
+
+    },
     {
         name: (
             <FormattedMessage
